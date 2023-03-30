@@ -1,0 +1,24 @@
+{% extends 'base.html'%} {% load static %}
+
+{% block content %} 
+  
+      <form>
+      {% csrf_token %}{{form.as_p}}
+      <br />
+      <p>
+        If do not hava an account,
+        <a href="register/"> Register here</a>
+      </p>
+      <p>
+        ලියාපදිංචි වී නැත්නම් මෙතනින්
+        <a href="register/"> ලියාපදංචි වන්න</a>
+      </p>
+      <br />
+      <button type="submit" class="button buttonWdt">Login</button>
+    </form>
+  
+    {% if error_message %}
+    <h3 class="warning">{{ error_message }}</h3>
+    {% endif %} {% endblock %}
+  </div>
+  

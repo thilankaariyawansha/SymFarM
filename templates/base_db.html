@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SyMFarM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="{% static 'styles_ndb.css' %}" />
+  </head>
+  <body>
+    <!-- aside -->
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <img src="{% static 'img\SyMFarM.png'%}" />
+          <br />
+          <p>System for Management of Farm Machinery</p>
+        </div>
+        <div class="cls" id="close-btn">
+          <span class="material-symbols-outlined"> close </span>
+        </div>
+      </div>
+
+      <div>
+        {% if user.is_authenticated %}
+        <div class="sidebar">
+          <a href="{% url 'dashboard' %}" class="active">
+            <span class="material-symbols-sharp"> dashboard </span>
+            <h2>Dashboard</h2>
+          </a>
+
+          {% comment %} <a href="{% url 'land' %}"> {% endcomment %}
+            <a href="#">
+            <span class="material-symbols-sharp"> landscape </span>
+            <h2>Lands</h2>
+          </a>
+
+          {% comment %} <a href="{% url 'machine' %}"> {% endcomment %}
+            <a href="#">
+            <span class="material-symbols-sharp"> agriculture </span>
+            <h2>Machines</h2>
+          </a>
+
+          <a href="#">
+            <span class="material-symbols-sharp"> engineering </span>
+            <h2>Operators</h2>
+          </a>
+          <a href="#">
+            <span class="material-symbols-sharp"> summarize </span>
+            <h2>Reports</h2>
+          </a>
+
+          <a href="{% url 'logout' %}">
+            <span class="material-symbols-sharp"> logout </span>
+            <h2>Logout</h2>
+          </a>
+        </div>
+
+        {% else %}
+        <h1><a href="{% url 'userlogin'%}"> Please login</a></h1>
+
+        {% endif %} {% block content %} {%endblock%}
+      </div>
+    </aside>
+    <!-- end of aside -->
+    <!-- start main -->
+
+    <main>
+      <div class="header">
+        <div class="mainHeadTi">
+          <h1></h1>
+        </div>
+
+        <div class="profileBox">
+          <div class="user">{% block contentAuth %} {% endblock %}</div>
+          <div class="profilepic">
+            <img
+              src="{% static 'img\icons8-male-user-48.png'%}"
+              alt=""
+              class="profilePic"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContent">{% block mainContent%} {% endblock %}</div>
+    </main>
+  </body>
+</html>

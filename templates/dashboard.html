@@ -1,0 +1,113 @@
+{% extends 'base_db.html' %} {% block contentAuth %}
+<h2>{{username}}</h2>
+{%endblock%} {% block mainContent%}{% if user.is_authenticated %}
+<div class="jobBox">
+  <div class="jobstart">
+    <h1>Farm Operation</h1>
+    <br />
+  </div>
+
+  <div class="jobsubBox">
+    <form class="mainForm">
+      <label for="my-dropdown">Work Type :</label>
+      <select id="my-dropdown" name="my-dropdown">
+        <option value="option1">Land Development</option>
+        <option value="option2">Land Preparation</option>
+        <option value="option3">Planting</option>
+        <option value="option3">Weed Control</option>
+        <option value="option3">Fertilization</option>
+        <option value="option3">Irrigation</option>
+        <option value="option3">Pesticide Application</option>
+        <option value="option3">Chemcial Application</option>
+        <option value="option3">Intercultivation</option>
+        <option value="option3">Harvesting</option>
+        <option value="option3">Loading</option>
+        <option value="option3">Transport</option></select
+      ><br />
+
+      <div class="operation">
+        <label for="">UID :</label>
+        <input type="text" /><br />
+        <label for="">MID :</label>
+        <input type="text" /><br />
+        <label for="">OID :</label>
+        <input type="text" />
+      </div>
+      <div class="inputs">
+        <label for="my-dropdown">Energy :</label>
+        <select id="my-dropdown" name="my-dropdown">
+          <option value="option1">Disesel</option>
+          <option value="option2">Petrol</option>
+          <option value="option3">Electricity</option>
+          <option value="option3">Biomass</option>
+          <option value="option3">Coal</option>
+          <option value="option3">SolarPV</option>
+          <option value="option3">Solar Thermal</option>
+          <option value="option3">Kerosene</option>
+          <option value="option3">Biogass</option>
+          <option value="option3">Furnace oil</option>
+          <option value="option3">Wind Energy</option>
+          <option value="option3">Human</option>
+        </select>
+        <label for="">Amount : </label>
+
+        <input type="text" /><label for="my-dropdown">(Unit)</label>
+        <select id="my-dropdown" name="my-dropdown">
+          <option value="option1">kg</option>
+          <option value="option2">L</option>
+          <option value="option2">persons</option></select
+        ><br />
+        <label for="">Materials : </label><input type="text" />
+        <label for="">Amount : </label><input type="text" />
+        <label for="my-dropdown">(Unit)</label>
+        <select id="my-dropdown" name="my-dropdown">
+          <option value="option1">kg</option>
+          <option value="option2">L</option>
+        </select>
+      </div>
+
+      <button class="btn">Start</button>
+      <button class="btn btn-c-r">End</button>
+    </form>
+  </div>
+</div>
+
+<div class="statusBox">
+  <h1>Current Staus</h1>
+
+  <div class="currentStatusBox">
+    <div class="currentSatus">
+      <h1 class="h1L">Lands</h1>
+      <h2>Current status</h2>
+      <h4>00001-N08658224E45596FHB</h4>
+
+      <h2>Resent Jobs</h2>
+      <h4>00001-N08658224E45596FHB</h4>
+      <h4>00001-N08658224E45596FHB</h4>
+      <h4>00001-N08658224E45596FHB</h4>
+    </div>
+
+    <div class="currentSatus">
+      <h1 class="h1M">Machines</h1>
+      <h2>Current status</h2>
+      <h4>00001-N08658224E45596FHB</h4>
+
+      <h2>Resent Jobs</h2>
+      <h4>00001-N08658224E45596FHB</h4>
+      <h4>00001-N08658224E45596FHB</h4>
+      <h4>00001-N08658224E45596FHB</h4>
+    </div>
+
+    <div class="currentSatus">
+      <h1 class="h1O">Operators</h1>
+      <h2>Current status</h2>
+      <h4>00001-N08658224E45596FHB</h4>
+
+      <h2>Resent Jobs</h2>
+      <h4>00001-N08658224E45596FHB</h4>
+      <h4>00001-N08658224E45596FHB</h4>
+      <h4>00001-N08658224E45596FHB</h4>
+    </div>
+  </div>
+</div>
+{%endif%} {% endblock %}

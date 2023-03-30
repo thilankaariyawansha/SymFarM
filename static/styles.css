@@ -1,0 +1,174 @@
+html{
+    font-size: 14px;
+  }
+  
+  body{
+    background: linear-gradient(to bottom, #ffffff, #d8d8d8);
+    height: 100vh;
+  
+  }
+  
+  a{
+    color: rgb(147, 155, 252);
+  }
+  
+  h1 {
+      font-family: Century Gothic;
+      color: #03a9ff;
+      text-align: center;
+    }
+  h2 {
+    font-family: Open Sans;
+    color: #026d52;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  h3 {
+      font-family: Century Gothic;
+      color: #03a9ff;
+      text-align: center;
+    }
+  
+    h4 {
+      font-family: Century Gothic;
+      color: #cfecfb;
+      text-align: center;
+    }
+  
+  p {
+      font-family: Century Gothic;
+      color: #fdfdfd;
+      text-align: center;
+    }
+  
+  
+  form {
+      font-family: Century Gothic;
+      color: #ffffff;
+      text-align: left;
+      font-size: 16px;
+      border-radius: 4px;
+      
+    }
+  
+    .tag{
+      padding: 1rem;
+      border: 0.1rem solid;
+  
+    }
+  
+  
+  
+  .headcolor {
+      background-color: rgb(255, 0, 0);
+    }
+  
+  .bodycolor {
+      background-color: rgb(41, 41, 41);
+    }
+  
+  .sidenav {
+      height:100%;
+      width:150px;
+      position: fixed;
+      z-index:1;
+      top:0;
+      left:0;
+      background-color:#111;
+      overflow-x: hidden;
+      padding-top:20px;
+    }
+  
+  .mainbody {
+      height:100%;
+      width:100%;
+      position: fixed;
+      z-index:1;
+      top:0;
+      left:150px;
+      background-color:#f0f0f0;
+      overflow-x: hidden;
+      padding-top:20px;
+  
+  }
+  
+  .formC {
+      text-align: left;
+      font-size:20px;
+      background-color:rgb(8, 93, 108);
+      width:50%;
+      padding: 20px;
+      top: 50px;
+      margin-top: 2rem;
+  
+      
+    }
+  
+  .centerWmgin {
+      margin-left: auto;
+      margin-right:auto;
+      width: 50%;
+      border: 3px solid #b8e7ff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  
+  #txtbg {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+       }
+  .button {
+      
+      background-color: #008cff;
+      color: white;
+      padding: 14px 20px;
+      margin: auto;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 8px 8px 0 rgba(0, 149, 255, 0.233), 0 6px 10px 0 rgba(0, 157, 255, 0.19);
+    }
+  
+  .buttonWdt {
+  
+    width: 100%;
+  
+  }
+  
+  .logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 100px;
+      padding: 25px;
+  
+    }
+  
+  #lk {
+      color : red;
+  }
+  
+  .logo {
+    
+    margin:25px auto;
+    
+  }
+  
+  img{
+    display:block;
+    margin: 0 auto;
+    height:10vh;
+    margin: auto;
+  }
+  
+  
+  .warning{
+    color: red;
+  
+  }

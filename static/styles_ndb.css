@@ -1,0 +1,530 @@
+
+/* Import google fonts Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+/* ---------------------------- */
+
+
+:root {
+    --color-theame-main: #ffffff;
+    --color-Theam-2: #007a7a;
+    --color-Theam-3: #0079ca;
+    --color-Theam-4: #ff0000;
+    --color-Theam-dark: #000000;
+    --color-background: #ffffff;
+    --color-Box: #eeeeee;
+    --color-text-primary: #1d1d1d;
+    --color-text-primary-dardk: #e1e1e1;
+    --color-muted: #696969;
+    --color-link: #0026ff;
+    --color-sidebar: #e0e0e0;
+    --color-theame-active:#e7e7e7;
+    --color-theame-active-plus:#cccccc;
+    
+  }
+
+
+/* gloabal properties  */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+  }
+
+/* properties for html document  */
+  html{
+    font-size: 18px;
+  }
+
+/* properties for html body  */
+
+
+
+body{
+    display: grid;
+    grid-template-columns: 20rem auto;
+    grid-template-rows: 2rem auto ;
+    grid-template-areas: "sidebar main"
+                        "sidebar main"
+                        ;
+    width: 100%;
+    height: 100vh;
+    font-family: inter;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: none;
+  }
+
+
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+h1{
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+
+h2{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
+h3{
+    font-size: 1.0rem;
+}
+
+
+h4{
+    font-size: 0.8rem;
+}
+
+
+h5{
+    font-size: 0.7rem;
+}
+small{
+    font-size: 0.6rem;
+}
+
+
+p{
+    color:var(--color-text-primary)
+}
+
+aside{
+    grid-area: sidebar;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-sidebar);
+    position: sticky;
+}
+
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem; 
+    margin-bottom: 1.5rem
+    
+}
+
+
+aside .cls {
+    display: none;
+}
+
+
+aside .logo {
+    
+    gap: 0.2rem;
+    margin: auto;
+}
+
+
+aside p {
+    text-align: center;
+    color:#076e37;
+    font-size: 1.25rem;
+}
+
+
+
+aside  a{
+    display: flex;
+    color: var(--color-text-primary);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 4rem;
+    transition: all 300ms ease;  
+    font-size: 1.5rem; 
+}
+
+aside  span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+    
+}
+
+aside  a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width:  100%;
+    font-size: .75rem;
+}
+
+aside  a.active{
+    
+    color: var(--color-Theam-3);
+    margin-left: 0;
+    background-color: var(--color-theame-active);
+}
+
+
+aside  a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color:var(--color-Theam-2);
+}
+
+
+aside a.active span{
+    color: var(--color-sucess);
+    margin-left: calc(1rem-3px);
+
+}
+
+
+aside a.hover{
+    color: red;
+    
+    
+}
+
+aside a:hover span {
+    margin-left: 1rem;
+}
+
+aside h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+/* -----------------------------*/
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns:auto 10rem;
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas: "header header"
+                "mainContent mainContent";
+    
+}
+
+main .header{
+    
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color: var(--color-sidebar);
+    border-bottom: 2px solid rgb(208, 208, 208);
+}
+
+main .mainHeadTi{
+
+   height: 3rem;
+    padding: 1rem;
+    text-align: center;
+    color: #0d6142;;
+  
+
+}
+
+main .profileBox {
+    height: 3rem;
+    
+    position: absolute;
+    right: 20rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    
+ 
+    
+}
+
+main .jobBox{
+    grid-area: mainContent;
+   
+    
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+main .statusBox {
+
+    grid-area: mainContent;
+    
+    background-color: var(--color-background);
+    padding: 1rem;
+    
+
+
+}
+
+main .statusBox .currentStatusBox{
+    display: flex;
+   
+    gap: 1rem;
+    border-color: rgb(217, 217, 217);
+}
+
+main .mainContent{
+    grid-area: mainContent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*define class*/
+
+.profile-pic{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow-x: hidden;
+}
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+.primary{
+    color:var(--primary-color-dk)
+}
+
+.nxl{
+    color: var(--color-nxl);
+}
+
+.boddyBox{
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    
+    background-color:var(--color-background);
+
+}
+
+.btn{
+
+    background-color: rgb(11, 116, 246);
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    border-radius: .2rem;
+    border: none;
+    font-size: 1.25rem;
+    width: 30%;
+
+}
+
+.btn-c-r{
+    background-color: red;
+}
+
+.btn-c-g{
+    background: rgb(10, 118, 34);
+}
+
+.btn-c-b{
+    background: rgb(8, 95, 208);
+}
+
+.profilepic{
+    height: 50px;
+    width: 50px;
+}
+
+.h1L{
+    color: #01863f;
+}
+
+.h1M{
+    color: #0740aa;
+}
+
+.h1O{
+    color: #f88f05;
+}
+
+.jobsubBox{
+    display: block;
+    width:100%;
+    padding: 1rem;
+    gap: 1rem;
+    border-style: solid;
+    border-color: rgb(217, 217, 217);
+
+    border-width: .1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background-color: rgba(228, 228, 228, 0.8);
+
+}
+
+
+.currentSatus{
+    padding: 1rem;
+    width: 100%;
+    line-height: 2;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: rgb(217, 217, 217);
+    
+    
+}
+
+.operation{
+    padding: 1rem;
+    width: 100%;
+    margin: 1rem auto;
+    
+    border-style: solid;
+
+    border-width: .1rem;
+    
+    border-radius: .5rem;
+    background-color: rgba(238, 251, 250, 0.5);
+
+    /* background-image: linear-gradient(to bottom, rgba(115, 211, 255, 0.7), rgba(37, 154, 251, .5)); */
+
+    border-color: rgb(217, 217, 217);
+
+}
+
+.inputs{
+    padding: 1rem;
+    width: 100%;
+    margin: 1rem auto;
+    
+    border-style: solid;
+    border-width: .1rem;
+    
+    border-radius: .5rem;
+
+    background-color: rgba(238, 255, 254, 0.5);
+    border-color: rgb(217, 217, 217);
+
+}
+
+
+
+.MchnMainContent{
+    background-color: rgb(240, 240, 240);
+    height: 92%;
+    margin: 2%;
+    border-style: solid;
+    border-width: .1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10fr 1fr;
+    grid-template-areas: "MB MB MB MB"
+                        "AM MM MR MS";
+    gap:1rem;
+    
+    
+      }
+.machinBody{
+    grid-area: MB;
+    height: 85%;
+    background-color: var(--color-background);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+    
+ .tag{
+    background-color: rgb(194, 194, 194);
+    border: .1rem solid;
+    padding: .5rem;
+    height: 3rem;
+    border-radius: .25rem;
+
+ }
+
+  .tag1 {
+    grid-area: AM;
+    
+  }
+
+  .tag2 {
+    grid-area: MM;
+  }
+
+  
+  .tag3 {
+    grid-area: MR;
+  
+  }
+
+
+
+  .mainForm{
+    font-size: .7rem;
+    line-height: 1.6rem;
+  }
+
+  .formC {
+    text-align: left;
+    font-size:20px;
+    background-color:rgb(153, 194, 202);
+    width:60%;
+    padding: 20px;
+    top: 1rem;
+    margin-top: 1rem;
+
+    
+  }
+
+.centerWmgin {
+    margin-left: auto;
+    margin-right:auto;
+    width: 60%;
+    border: 3px solid #b8e7ff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  
+
+
+
+  input{
+    font-size: 1.15rem;
+  }
+
+  select{
+    font-size: 1.15rem;
+
+  }
+
+  label{
+    font-size: 1.15rem;
+
+  }
+
+  
+  

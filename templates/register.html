@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %} <br>
+
+<form method="POST" class="formC centerWmgin">
+  <h2>Register here</h2>
+  {% csrf_token %} {{form|crispy}}
+  <br />
+  <button type="submit" class="button buttonWdt">Register</button>
+  <br />
+  <h5><a href="/">Back to login </a></h5>
+</form>
+
+{% endblock %}
