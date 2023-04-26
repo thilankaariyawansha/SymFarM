@@ -70,4 +70,11 @@ def user_verify(response):
         unam = ''
         
     return uvfd, unam
+
+
+def reset_pwd(response):
+  
+        
+    return render(response,'pwd_reset.html', {} )
+
     

@@ -1,0 +1,17 @@
+{% extends 'base_db.html' %}{% load crispy_forms_tags %} {% block contentAuth %}
+<h2>{{user}}</h2>
+{%endblock%} {% block mainContent %}
+<div class="mainbody">
+  <form method="POST" class="formC centerWmgin">
+    {% csrf_token %} {{addmachine|crispy }}
+    <br />
+    <button type="submit" class="btn">Add Land</button>
+    <br />
+
+    <br />
+    <h3><a href="{% url 'dashboard' %}">Back to dashboard</a></h3>
+    <br />
+    <h3><a href="{% url 'machine' %}">Back to Machine</a></h3>
+  </form>
+</div>
+{% endblock%}

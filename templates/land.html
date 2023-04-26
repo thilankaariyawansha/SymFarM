@@ -1,0 +1,19 @@
+{% extends 'base_db.html' %} {% block contentAuth %}
+<h2>{{user}}</h2>
+{%endblock%} {% block mainContent%} {% if user.is_authenticated %}
+<div class="MchnMainContent">
+  <div class="machinBody">
+    <h1>test</h1>
+  </div>
+  <div class="tag tag1">
+    <h2><a href="{% url 'addland' %}"> Add Land </a></h2>
+  </div>
+  <div class="tag tag2">
+    <h2>Land Managment</h2>
+  </div>
+  <div class="tag tag3">
+    <h2>My Lands</h2>
+  </div>
+
+  {%endif%} {% endblock %}
+</div>

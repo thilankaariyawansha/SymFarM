@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'users.apps.UsersConfig',
+    'landMgt.apps.LandmgtConfig',
+    'machineryMgt.apps.MachinerymgtConfig',
 ]
 
 MIDDLEWARE = [
